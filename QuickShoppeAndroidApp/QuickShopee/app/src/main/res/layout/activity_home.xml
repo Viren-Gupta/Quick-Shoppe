@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <!--
+    <Button
+        android:id="@+id/scan_barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/barcode_result"
+        android:onClick="scanBarcode"
+        android:text="+" />
+    -->
+    <!--
+    <TextView
+        android:id="@+id/barcode_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="" />
+    -->
+    <ListView
+        android:id="@+id/mainListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:layout_margin="5dp"/>
+
+
+    <Button
+        android:id="@+id/checkOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="checkOut"
+        android:textColor="#FFF"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="checkOut" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/scan_barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/checkOut"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="18dp"
+        android:clickable="true"
+        android:onClick="scanBarcode"
+        android:tint="@android:color/white"
+        app:elevation="6dp"
+        app:borderWidth="3dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/cancelOrderBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/checkOut"
+        android:layout_marginBottom="0dp"
+        android:onClick="cancelOrder"
+        android:text="Cancel Order"
+        android:translationZ="10dp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iviewID"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/empty_bag" />
+
+    <TextView
+        android:id="@+id/tviewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iviewID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Your cart seems to be empty !"
+        android:textColor="#666699"
+        android:textSize="20sp" />
+
+</RelativeLayout>

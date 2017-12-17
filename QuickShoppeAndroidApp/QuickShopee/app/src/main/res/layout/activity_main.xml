@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/images7"
+    tools:context="com.softwarelab.quickshopee.MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.60"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/shopName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="11dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="10dp"
+            android:longClickable="true"
+            android:minHeight="15dip"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.40">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.45">
+            <Button android:id="@+id/btnGetShop"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/search"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                />
+                <!--android:text="FIND NEAR SHOP"-->
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.55">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+                <Button android:id="@+id/btnGetRoute"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/route"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:layout_width="70dp"
+                    android:layout_height="80dp" />
+                <!--android:text="FIND ROUTE"-->
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+                <Button android:id="@+id/btnEnterShop"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/cart"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+                <!--android:text="ENTER SHOP"-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

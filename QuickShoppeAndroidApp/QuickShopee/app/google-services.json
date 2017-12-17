@@ -1,0 +1,121 @@
+{
+  "project_info": {
+    "project_number": "901197315899",
+    "firebase_url": "https://quick-shope.firebaseio.com",
+    "project_id": "quick-shope",
+    "storage_bucket": "quick-shope.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901197315899:android:54d210b491923a5e",
+        "android_client_info": {
+          "package_name": "com.softwarelab.quickshopee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901197315899-72ulfv67plnn0hu0brs6o5hq9tf9nuei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softwarelab.quickshopee",
+            "certificate_hash": "90d1139afafdd065e81d1f7acbb40c3622fcbf98"
+          }
+        },
+        {
+          "client_id": "901197315899-03u6gr3ko0cmn3kmissbpkop98n61oc0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softwarelab.quickshopee",
+            "certificate_hash": "ca937e5e68900b104a2ed4c9c45a04cd2392276f"
+          }
+        },
+        {
+          "client_id": "901197315899-305dm66c9l506g3ig3b7iik5trllnl01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfpaSgDUqhvbjHRHpIvp8RWJc0qBitf1E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901197315899-q20umf9sk6unm7nceuq0daam386llarr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.softwarelab.quickshopee"
+              }
+            },
+            {
+              "client_id": "901197315899-305dm66c9l506g3ig3b7iik5trllnl01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901197315899:android:27ec4de43369b48b",
+        "android_client_info": {
+          "package_name": "com.softwarelab.quickshoppe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901197315899-5p4fnfdjna51embcd15jqvph9lblce90.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softwarelab.quickshoppe",
+            "certificate_hash": "ca937e5e68900b104a2ed4c9c45a04cd2392276f"
+          }
+        },
+        {
+          "client_id": "901197315899-305dm66c9l506g3ig3b7iik5trllnl01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfpaSgDUqhvbjHRHpIvp8RWJc0qBitf1E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901197315899-q20umf9sk6unm7nceuq0daam386llarr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.softwarelab.quickshopee"
+              }
+            },
+            {
+              "client_id": "901197315899-305dm66c9l506g3ig3b7iik5trllnl01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

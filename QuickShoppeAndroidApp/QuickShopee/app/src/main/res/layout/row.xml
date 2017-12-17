@@ -1,0 +1,71 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_row_relative_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    android:background="@drawable/layout_bg"
+    android:orientation="horizontal"
+    android:padding="3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Product Name"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Price"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/productName"/>
+
+        <TextView
+            android:id="@+id/productQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Quantity"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_alignBaseline="@+id/productPrice"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="75dp" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Total"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:layout_above="@+id/productPrice"
+            android:layout_alignEnd="@+id/productQuantity" />
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="30dp"
+            android:id="@+id/removeProdImageView"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:layout_marginEnd="20dp"
+            android:onClick="productRemoveBtnClicked"
+            android:layout_marginTop="35dp"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

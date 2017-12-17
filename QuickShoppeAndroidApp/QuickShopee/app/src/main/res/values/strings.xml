@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Quick Shopee</string>
+    <string name="title_activity_shop_select">ShopSelectActivity</string>
+</resources>

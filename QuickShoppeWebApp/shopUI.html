@@ -1,0 +1,161 @@
+   <html>
+      <head>
+         <title>QSInterface</title>
+         <link rel="stylesheet" href="css/shopUI.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script src="js/bootbox.min.js"></script> <!-- for delete and cancel popup-->
+      </head>
+      <body onload="loading()">
+
+         <!-- modal for invalid checkout id when order is placed-->
+         <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                     <p>Invalid checkout identity</p>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- modal for showing items present in shop database for shopkeeper to edit-->
+         <div class="modal fade" id="myModal_change" role="dialog">
+            <div class="modal-dialog">
+               <!-- Modal content-->
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <table class="table" id="changeTable" data-dismiss="modal">
+                        <thead>
+                           <tr>
+                              <th>Item Name</th>
+                              <th>Price</th>
+                              <th>Item Quantity</th>
+                              <th>Edit</th>
+                           </tr>
+                        </thead>
+                     </table>
+                     <button type="submit" class="btn btn-success" id="addButton" onclick="addItem()">
+                        Add an item
+                     </button>
+
+                     <span class="btn btn-success btn-file">
+                        Import csv<input type="file" id="csv" onchange="handleFiles(this.files)" accept=".csv" hidden="true">
+                     </span>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- modal containing single item to be edited in shop database -->
+         <div class="modal fade" id="myModal_edit" role="dialog">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <form id="loginFormId" class="loginForm">
+                        <div class="form-group">
+                           <label class="shopLogin">Item Name</label>
+                           <input type="text" class="form-control" id="item_name">
+                        </div>
+                        <div class="form-group">
+                           <label class="shopLogin">Quantity</label>
+                           <input type="number" class="form-control" id="quantity">
+                        </div>
+                        <div class="form-group">
+                           <label class="shopLogin">Price</label>
+                           <input type="number" step="any" class="form-control" id="price">
+                        </div>
+                        <div class="form-group">
+                           <label class="shopLogin">Barcode</label>
+                           <input type="number" class="form-control" id="barcode">
+                        </div>
+                        <button type="submit" class="btn btn-success" id="editButton" onclick="editDB()">
+                        <i id="loadingCircle"></i>Commit
+                        </button>
+                        <button type="submit" class="btn btn-danger" id="deleteButton" onclick="deleteItem()">
+                        <i id="loadingCircle"></i>Delete this item
+                        </button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!--modal for exhausting items-->
+         <div class="modal fade" id="myModal_exhaust" role="dialog">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-body">
+                     <table class="table" id="exhaustTable" data-dismiss="modal">
+                        <thead>
+                           <tr>
+                              <th>Item Name</th>
+                              <th>Price</th>
+                              <th>Item Quantity</th>
+                              <th>Barcode</th>
+                           </tr>
+                        </thead>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+         <!-- header for UI page -->
+         <div class="container-fluid bg-2" style="font-family:'Montserrat', sans-serif;">
+            <div class="one">
+               <button class="btn btn-primary" onclick="logout()">Logout</button>	
+            </div>
+            <div class="container-fluid text-center">
+               <h1 id="ShopName" class="ShopName"></h1>
+            </div>
+            <div class="two">
+               <button type="submit" class="btn btn-primary" onclick="change()" id="change">Update my store</button>	
+            </div>
+            <div class="three">
+               <button type="submit" class="btn btn-danger" onclick="exhaust()" id="change">Find Exhausting items</button> 
+            </div>
+
+         </div>
+         <!-- order placing-->
+         <div class="container-fluid" style="font-family:'Montserrat', sans-serif;">
+            <form class="placeOrder" id="placeOrder">
+               <div class="form-group">
+                  <input type="number" class="checkoutID" id="checkoutID" placeholder="Enter checkout ID here" required="true">
+               </div>
+               <div class="form-group">
+                  <button type="submit" class="btn btn-success placeButton" id="submitButton">
+                  <i id="placeCircle"></i>Place order
+                  </button>
+               </div>
+            </form>
+         </div>
+         <!-- shows list of pending orders -->
+         <div class="table-responsive">
+            <table class="table table-hover" id="portalTable">
+               <thead>
+                  <tr>
+                     <th>CheckoutID</th>
+                     <th>Time In</th>
+                     <th>View List</th>
+                     <th>Total bill</th>
+                     <th>Mark as Done</th>
+                  </tr>
+               </thead>
+            </table>
+         </div>
+         <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+         <script src="js/shopUI.js"></script>
+      </body>
+   </html>
